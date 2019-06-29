@@ -49,6 +49,7 @@ Things you may want to cover:
 ### Association
 - has_many :messages, dependent: :destroy
 - has_many :groupes, through: :users_groupes
+- has_many :users_groupes
 
 
 
@@ -61,6 +62,7 @@ Things you may want to cover:
 ### Association
 - has_many :messages, dependent: :destroy
 - has_many :users, through: :users_groupes
+- has_many :users_groupes
 
 
 
