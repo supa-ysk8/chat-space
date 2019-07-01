@@ -77,8 +77,9 @@
     color: #fff;
   }
 }
-      //slide-body終わり
+      //side-body終わり
 
+      //main-header始まり
 .chat-mains{
   box-sizing:border-box;
   width: calc(100vw - 300px);
@@ -113,6 +114,41 @@
         }
     }
   }
-  
+           //main-header終わり
+
+  .main__body{
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+    overflow: scroll;
+    .messages{
+      padding-bottom: 40px;
+      &__head{
+        display: flex;
+        margin-bottom: 10px;
+        &__name{
+          color: #434a54;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      &__text{
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+
+
+
+
+
 
 }
