@@ -1,73 +1,80 @@
-.alert-box グループを作成しました
+.extra-box 
+  グループを作成しました
 .wrapper
- .chat-side
-  .side-header
-   .side-header__box
-    %p.side-header__box__user-name 
-     ex-user
-    %ul.side-header__box__menu
-     %li.side-header__box__menu__new-group
-     =link_to "", class: "side-header__box__menu__new-group__new" do
-      = fa_icon "edit", class: "side-header__box__menu__new-group__new-icon"
-     %li.side-header__box__menu__edit-user
-     =link_to "", class: "side-header__box__menu__edit-user__edit" do
-      = fa_icon "cog", class: "side-header__box__menu__edit-user__edit-icon"
- 
-  .side-body
-   =link_to "", class: "groups" do
-    .group
-     %p.group__name 
-      ex-group1
-     %p.group__last-message 
-      ex-text1,text1,text1
-    .group
-     %p.group__name 
-      ex-group2
-     %p.group__last-message 
-      ex-text2,text2,text2
- 
- .chat-mains
-  .main__header
-   .main__header__group
-    %h2.main__header__group__current--group
-     ex-current_group
-    %ul.main__header__group__list
-     %li.main__header__group__list--title
-      Member :
-     %li.main__header__group__list--members
-      extra1 extra2 extra3
-   .main__header__edit--btn
-    =link_to "", class: "main__header__edit--btn--text" do
-     Edit
-  .main__body
-   .messages
-    .messages__head
-     %p.messages__head__name
-      ex-nickname
-     %p.messages__head__date
-      20xx/xx/xx(xx) xx:xx:xx
-    %p.messages__text
-     ex-chat-message
-   .messages
-    .messages__head
-     %p.messages__head__name
-      ex-nickname2
-     %p.messages__head__date
-      20xx/xx/xx(xx) xx:xx:xx2
-    %p.messages__text
-     ex-chat-message2
-  -#  .main__body__content
-  -#   .main__body__chat
-  -#     .main__body__chat__main--nickname
-  -#     ex-nickname
-  -#     .main__body__chat__date
-  -#     20xx/xx/xx(xx) xx:xx:xx
-  -#   .main__body__chat__message
-  -#     ex-chat-message
-  -#     .main__body__chat
-  -#     .main__body__chat__main--nickname
-  -#     ex-nickname2
-  -#     .main__body__chat__date
-  -#     20xx/xx/xx(xx) xx:xx:xx2
-  -#   .main__body__chat__message
-  -#     ex-chat-message2
+  .chat-side
+    .side-header
+      .side-header__box
+        %p.side-header__box__user-name ex-user
+        %ul.side-header__box__menu
+          %li.side-header__box__menu__new-group
+            =link_to "", class: "side-header__box__menu__new-group__new" do
+              = fa_icon "edit", class: "side-header__box__menu__new-group__new-icon"
+          %li.side-header__box__menu__edit-user
+            =link_to "", class: "side-header__box__menu__edit-user__edit" do
+              = fa_icon "cog", class: "side-header__box__menu__edit-user__edit-icon"
+    .groups
+      =link_to "", class: "groups" do
+        .group
+          %p.group__group-name ex-group1
+          %p.group__last-message ex-text1,text1,text1
+      =link_to "", class: "groups" do
+        .group
+          %p.group__group-name ex-group2
+          %p.group__last-message ex-text2,text2,text2
+      =link_to "", class: "groups" do
+        .group
+          %p.group__group-name ex-group3
+          %p.group__last-message ex-text3,text3,text3
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group
+          current-group
+        %ul.main-header__left-box__member-list
+          Member：
+          %li.main-header__left-box__member-list__member saori@
+          %li.main-header__left-box__member-list__member test
+          %li.main-header__left-box__member-list__member supa
+      =link_to "", class: "main__header__edit--btn--text" do
+        .main-header__edit-btn Edit
+    .messages
+      .message
+        .message__head-info
+          %p.message__head-info__people example
+          %p.message__head-info__date 2019/06/28(Fri) 20:38:57
+        %p.message__text examexam
+      .message
+        .message__head-info
+          %p.message__head-info__people example2
+          %p.message__head-info__date 2019/06/28(Fri) 20:39:01
+        %p.message__text exexexexex
+      .message
+        .message__head-info
+          %p.message__head-info__people example3
+          %p.message__head-info__date 2019/06/28(Fri) 20:39:08
+        %p.message__text xxxxxxxxxxxxxxxx
+      .message
+        .message__head-info
+          %p.message__head-info__people example4
+          %p.message__head-info__date 2019/06/28(Fri) 20:41:37
+        %p.message__text eeeeeeeeeeeeeeee
+      .message
+        .message__head-info
+          %p.message__head-info__people example5
+          %p.message__head-info__date 2019/06/29(Sat) 13:25:38
+        %p.message__text exexex
+      .message
+        .message__head-info
+          %p.message__head-info__people example6
+          %p.message__head-info__date 2019/06/29(Sat) 13:26:28
+        %p.message__text aaaaaaaaaaa
+    .form
+      %form#new_message.new_message{"accept-charset": "UTF-8", action: "/groups/1942/messages", enctype: "multipart/form-data", method: :"post"}
+        %input{name: "utf8", type: "hidden", value: "✓"}/
+        %input{name: "authenticity_token", type: "hidden", value: "2RD63XeTqUiGIib0MGXtsl65u6rif/n792QAWaHPOMmT/wG9oBbalKSjrfsHT+Va0NCgzRHNL9eKBn49uU6lTQ=="}/
+        .input-box
+          %input#message_content.input-box__text{name: "message[content]", placeholder: "  type a message", type: "text"}/
+          %label.input-box__image{for: "message_image"}
+            %i.fa.fa-image
+            %input#message_image.input-box__image__window{name: "message[image]", type: "file"}/
+        %input.submit-btn{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
