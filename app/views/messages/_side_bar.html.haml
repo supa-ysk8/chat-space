@@ -1,0 +1,25 @@
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name 
+        = current_user.name
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group
+          =link_to "", class: "side-header__box__menu__new-group__new" do
+            = fa_icon "edit", class: "side-header__box__menu__new-group__new-icon"
+        %li.side-header__box__menu__edit-user
+          =link_to edit_user_path(current_user), class: "side-header__box__menu__edit-user__edit" do
+            = fa_icon "cog", class: "side-header__box__menu__edit-user__edit-icon"
+  .groups
+    =link_to "", class: "groups" do
+      .group
+        %p.group__group-name ex-group1
+        %p.group__last-message ex-text1,text1,text1
+    =link_to "", class: "groups" do
+      .group
+        %p.group__group-name ex-group2
+        %p.group__last-message ex-text2,text2,text2
+    =link_to "", class: "groups" do
+      .group
+        %p.group__group-name ex-group3
+        %p.group__last-message ex-text3,text3,text3
