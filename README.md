@@ -48,8 +48,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :messages, dependent: :destroy, 
-- has_many :groups, through: :users_groups
-- has_many :users_groups
+- has_many :groups, through: :group_users
+- has_many :group_users
 
 
 
@@ -62,11 +62,11 @@ Things you may want to cover:
 ### Association
 - has_many :messages, dependent: :destroy
 - has_many :users, through: :users_groups
-- has_many :users_groups
+- has_many :group_users
 
 
 
-## users_groupsテーブル
+## group_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|

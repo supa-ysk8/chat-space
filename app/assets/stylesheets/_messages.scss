@@ -1,12 +1,12 @@
 @import "variable";
-.extra-box{
-    background-color: $light_blue;
-    color: white;
-    font-size: 1rem;
-    font-weight: lighter;
-    text-align: center;
-    width: 100vw;
-}
+// .extra-box{
+//     background-color: $light_blue;
+//     color: white;
+//     font-size: 1rem;
+//     font-weight: lighter;
+//     text-align: center;
+//     width: 100vw;
+// }
 .chat-side{
   width: 300px;
   color: white;
@@ -47,13 +47,12 @@
     text-decoration:none;
       .group{
         margin-bottom: 40px;
-        &__group-name{
+        &__name{
           font-size: 15px;
           margin-bottom: 5px;
           color: $white;
-          text-decoration:none;
         }
-        &__last-message{
+        &__message{
           font-size: 11px;
           color: $white;
         }
