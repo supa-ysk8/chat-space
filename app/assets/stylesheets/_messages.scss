@@ -130,36 +130,60 @@
       background-color: #ddd;
       .new_message{
         display: flex;
-        .input-box{
-          position: relative;
-          width: 100%;
-          &__text{
-            height: 50px;
-            width: 100%;
-            padding: 0 -10px 0 10px;
-            color: $black;
-            border-style: none;
+          .form__message{
+            width:100%;
+            padding-left: 10px;
           }
-          &__image{
-            font-size: 1.3rem;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            &__window{
-              display: none;
+          .form__mask{
+            &__image{
+              .hidden{
+                display:none;
+              }
+              .icon{
+                position:relative;
+                font-size: 1.3rem;
+                top: 15px;
+                right: 35px;
+              }
             }
           }
-        }
-        .submit-btn{
-          width: 100px;
-          height: 50px;
-          padding: 0 30px;
-          margin-left: 15px;
-          background-color: $light_blue;
-          color: white;
-          cursor: pointer;
-        }
+          .form__submit{
+            border-radius: 0%;
+            width: 110px;
+            height: 50px;
+            color: $white;
+            background-color: $light_blue;
+          }
+        // .input-box{
+        //   position: relative;
+        //   width: 100%;
+        //   &__text{
+        //     height: 50px;
+        //     width: 100%;
+        //     padding: 0 -10px 0 10px;
+        //     color: $black;
+        //     border-style: none;
+        //   }
+        //   &__image{
+        //     font-size: 1.3rem;
+        //     position: absolute;
+        //     top: 10px;
+        //     right: 10px;
+        //     cursor: pointer;
+        //     &__window{
+        //       display: none;
+        //     }
+        //   }
+        // }
+        // .submit-btn{
+        //   width: 100px;
+        //   height: 50px;
+        //   padding: 0 30px;
+        //   margin-left: 15px;
+        //   background-color: $light_blue;
+        //   color: white;
+        //   cursor: pointer;
+        // }
       }
     }
 }
