@@ -13,7 +13,7 @@
             %li.main-header__left-box__member-list__member
             = user.name
             
-      =link_to edit_group_path(current_user), class: "main__header__edit--btn--text" do
+      =link_to edit_group_path(@group), class: "main__header__edit--btn--text" do
         .main-header__edit-btn Edit
     .messages
       = render partial: 'message', collection: @messages    # = render @messages と書けるらしい
