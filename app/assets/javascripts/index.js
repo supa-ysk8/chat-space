@@ -2,7 +2,6 @@ $(document).on('turbolinks:load', function(){
   var search_list = $('#user-search-result');
   
   function appendUser(user) {
-    // console.log(user)
     var html = `<div class='chat-group-user clearfix'>
                   <p class='chat-group-user__name'>${user.name}</p>
                   <a class='user-search-add chat-group-user__btn chat-group-user__btn--add' data-user-id=${user.id}' data-user-name='${user.name}'>追加</a>
@@ -19,7 +18,6 @@ $(document).on('turbolinks:load', function(){
   
   $('#user-search-field').on('keyup', function () {
     var input = $('#user-search-field').val();
-    // console.log(input)
     if (input !== "") {
       $.ajax({
           type: 'GET',
@@ -60,9 +58,8 @@ $(document).on('turbolinks:load', function(){
   $('#user-search-result').on('click', '.chat-group-user__btn--add', function () {
     var user_id = $(this).data('user-id');
     var user_name = $(this).data('user-name');
-    // console.log(user_id,user_name)
+    
     addUser(user_id, user_name);
-    // console.log(user_id,user_name)
     $(this).parent().remove();
   });
   
