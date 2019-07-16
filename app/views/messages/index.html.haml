@@ -1,4 +1,3 @@
--# .extra-box 
 -#   グループを作成しました
 .wrapper
   = render partial: "side_bar"   #部分テンプレ、side_bar
@@ -17,36 +16,6 @@
         .main-header__edit-btn Edit
     .messages
       = render partial: 'message', collection: @messages    # = render @messages と書けるらしい
-      -# .message
-      -#   .message__head-info
-      -#     %p.message__head-info__people example
-      -#     %p.message__head-info__date 2019/06/28(Fri) 20:38:57
-      -#   %p.message__text examexam
-      -# .message
-      -#   .message__head-info
-      -#     %p.message__head-info__people example2
-      -#     %p.message__head-info__date 2019/06/28(Fri) 20:39:01
-      -#   %p.message__text exexexexex
-      -# .message
-      -#   .message__head-info
-      -#     %p.message__head-info__people example3
-      -#     %p.message__head-info__date 2019/06/28(Fri) 20:39:08
-      -#   %p.message__text xxxxxxxxxxxxxxxx
-      -# .message
-      -#   .message__head-info
-      -#     %p.message__head-info__people example4
-      -#     %p.message__head-info__date 2019/06/28(Fri) 20:41:37
-      -#   %p.message__text eeeeeeeeeeeeeeee
-      -# .message
-      -#   .message__head-info
-      -#     %p.message__head-info__people example5
-      -#     %p.message__head-info__date 2019/06/29(Sat) 13:25:38
-      -#   %p.message__text exexex
-      -# .message
-      -#   .message__head-info
-      -#     %p.message__head-info__people example6
-      -#     %p.message__head-info__date 2019/06/29(Sat) 13:26:28
-      -#   %p.message__text aaaaaaaaaaa
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
@@ -55,12 +24,3 @@
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
-      -# %form#new_message.new_message{"accept-charset": "UTF-8", action: "/groups/1942/messages", enctype: "multipart/form-data", method: :"post"}
-      -#   %input{name: "utf8", type: "hidden", value: "✓"}/
-      -#   %input{name: "authenticity_token", type: "hidden", value: "2RD63XeTqUiGIib0MGXtsl65u6rif/n792QAWaHPOMmT/wG9oBbalKSjrfsHT+Va0NCgzRHNL9eKBn49uU6lTQ=="}/
-      -#   .input-box
-      -#     %input#message_content.input-box__text{name: "message[content]", placeholder: "  type a message", type: "text"}/
-      -#     %label.input-box__image{for: "message_image"}
-      -#       %i.fa.fa-image
-      -#       %input#message_image.input-box__image__window{name: "message[image]", type: "file"}/
-      -#   %input.submit-btn{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
